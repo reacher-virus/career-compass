@@ -118,7 +118,7 @@ Career-Twin-AI/
 Clone the repository
 
 ```bash
-git clone https://github.com/AbhayChauhan-coder/Career-Twin-AI.git
+git clone https://github.com/reacher-virus/Career-Twin-AI.git
 ```
 
 Move into the project directory
