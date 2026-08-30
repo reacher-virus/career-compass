@@ -1,4 +1,5 @@
 .venv/
+venv/
 __pycache__/
 *.py[cod]
 .streamlit/
@@ -6,3 +7,10 @@ __pycache__/
 streamlit.pid
 database/users.db
 .env
+.DS_Store
+
+# Node & Frontend build artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
