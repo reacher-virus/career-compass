@@ -1,0 +1,107 @@
+{
+  "AI Engineer": {
+    "required_skills": ["Python", "SQL", "Machine Learning", "Deep Learning", "Docker", "FastAPI", "Cloud Basics", "MLOps"],
+    "recommended_certifications": ["Google Professional Machine Learning Engineer", "AWS Machine Learning Specialty"],
+    "target_projects": ["LLM app", "Computer vision pipeline", "Model deployment API"]
+  },
+  "Data Scientist": {
+    "required_skills": ["Python", "Statistics", "SQL", "Machine Learning", "Power BI", "Data Visualization", "Pandas"],
+    "recommended_certifications": ["Google Data Analytics", "Microsoft Power BI Data Analyst"],
+    "target_projects": ["Predictive analytics dashboard", "Customer churn model", "A/B testing report"]
+  },
+  "ML Engineer": {
+    "required_skills": ["Python", "Machine Learning", "Deep Learning", "Docker", "Kubernetes", "MLOps", "FastAPI", "Cloud Basics"],
+    "recommended_certifications": ["AWS Machine Learning Specialty", "Azure AI Engineer Associate"],
+    "target_projects": ["Model serving platform", "Feature store prototype", "CI/CD ML workflow"]
+  },
+  "Data Analyst": {
+    "required_skills": ["SQL", "Excel", "Python", "Power BI", "Statistics", "Data Cleaning", "Business Communication"],
+    "recommended_certifications": ["Google Data Analytics", "PL-300 Power BI"],
+    "target_projects": ["Sales dashboard", "Cohort analysis", "Executive KPI report"]
+  },
+  "Cybersecurity Engineer": {
+    "required_skills": ["Networking", "Linux", "Security", "Python", "SIEM", "Incident Response", "Cloud Security"],
+    "recommended_certifications": ["CompTIA Security+", "Certified Ethical Hacker"],
+    "target_projects": ["Home lab SOC", "Vulnerability report", "Threat detection rules"]
+  },
+  "Backend Developer": {
+    "required_skills": ["Python", "SQL", "FastAPI", "REST APIs", "Docker", "System Design", "Git"],
+    "recommended_certifications": ["AWS Cloud Practitioner", "Meta Back-End Developer"],
+    "target_projects": ["Production API", "Auth service", "Queue-based worker system"]
+  },
+  "Frontend Developer": {
+    "required_skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Testing", "Git"],
+    "recommended_certifications": ["Meta Front-End Developer", "freeCodeCamp Front End Libraries"],
+    "target_projects": ["Responsive dashboard", "Design system", "API-driven web app"]
+  },
+  "Full Stack Developer": {
+    "required_skills": ["JavaScript", "React", "Python", "FastAPI", "SQL", "Docker", "Cloud Basics", "Git"],
+    "recommended_certifications": ["Meta Full-Stack Engineer", "AWS Cloud Practitioner"],
+    "target_projects": ["SaaS app", "Payment integration", "Admin dashboard"]
+  },
+  "Cloud Engineer": {
+    "required_skills": ["Linux", "Networking", "AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"],
+    "recommended_certifications": ["AWS Solutions Architect Associate", "Azure Administrator Associate"],
+    "target_projects": ["Terraform infrastructure", "Containerized deployment", "Monitoring stack"]
+  },
+  "DevOps Engineer": {
+    "required_skills": ["Linux", "Docker", "Kubernetes", "CI/CD", "Terraform", "Monitoring", "Scripting"],
+    "recommended_certifications": ["Certified Kubernetes Administrator", "AWS DevOps Engineer"],
+    "target_projects": ["CI/CD pipeline", "Kubernetes deployment", "Infrastructure as code"]
+  },
+  "Product Manager": {
+    "required_skills": ["Product Strategy", "User Research", "Analytics", "Roadmapping", "Stakeholder Management", "SQL"],
+    "recommended_certifications": ["Google Project Management", "Product School Certificate"],
+    "target_projects": ["PRD portfolio", "Growth experiment", "User research case study"]
+  },
+  "UX Designer": {
+    "required_skills": ["User Research", "Wireframing", "Figma", "Prototyping", "Usability Testing", "Design Systems"],
+    "recommended_certifications": ["Google UX Design", "Nielsen Norman UX Certificate"],
+    "target_projects": ["Mobile app redesign", "Design system", "Usability study"]
+  },
+  "Business Analyst": {
+    "required_skills": ["SQL", "Excel", "Requirements Analysis", "Process Mapping", "Power BI", "Stakeholder Management"],
+    "recommended_certifications": ["ECBA", "Google Data Analytics"],
+    "target_projects": ["Process improvement report", "Requirements document", "KPI dashboard"]
+  },
+  "Digital Marketer": {
+    "required_skills": ["SEO", "Google Ads", "Analytics", "Content Strategy", "Email Marketing", "A/B Testing"],
+    "recommended_certifications": ["Google Ads", "HubSpot Content Marketing"],
+    "target_projects": ["SEO audit", "Campaign dashboard", "Landing page experiment"]
+  },
+  "Finance Analyst": {
+    "required_skills": ["Excel", "Financial Modeling", "Accounting", "Power BI", "SQL", "Valuation"],
+    "recommended_certifications": ["FMVA", "CFA Level 1"],
+    "target_projects": ["Three-statement model", "Valuation report", "Budget variance dashboard"]
+  },
+  "Robotics Engineer": {
+    "required_skills": ["Python", "C++", "ROS", "Control Systems", "Computer Vision", "Embedded Systems"],
+    "recommended_certifications": ["ROS Developer", "NVIDIA Jetson AI Specialist"],
+    "target_projects": ["Autonomous navigation bot", "Vision-based controller", "ROS simulation"]
+  },
+  "Game Developer": {
+    "required_skills": ["C#", "Unity", "Game Physics", "3D Math", "Git", "Level Design", "Performance Optimization"],
+    "recommended_certifications": ["Unity Certified Associate", "C# Developer Certificate"],
+    "target_projects": ["Playable prototype", "AI enemy system", "Polished game jam build"]
+  },
+  "Mobile App Developer": {
+    "required_skills": ["Dart", "Flutter", "REST APIs", "Firebase", "State Management", "Testing", "Git"],
+    "recommended_certifications": ["Google Associate Android Developer", "Flutter Development Bootcamp"],
+    "target_projects": ["Published mobile app", "Offline-first app", "Firebase-auth app"]
+  },
+  "Research Assistant": {
+    "required_skills": ["Literature Review", "Python", "Statistics", "Academic Writing", "Data Analysis", "Experiment Design"],
+    "recommended_certifications": ["Research Methods Certificate", "IBM Data Science"],
+    "target_projects": ["Survey study", "Reproducible notebook", "Conference-style paper"]
+  },
+  "Germany Software Engineer": {
+    "required_skills": ["Python", "Java", "SQL", "System Design", "Git", "Docker", "German A2", "Cloud Basics"],
+    "recommended_certifications": ["AWS Cloud Practitioner", "Goethe German A2"],
+    "target_projects": ["Backend API", "Cloud deployment", "German-language job profile"]
+  },
+  "AI Product Manager": {
+    "required_skills": ["AI Fundamentals", "Product Strategy", "Analytics", "Prompt Engineering", "User Research", "Roadmapping", "SQL"],
+    "recommended_certifications": ["AI Product Management Specialization", "Google Project Management"],
+    "target_projects": ["AI feature PRD", "Model evaluation plan", "User adoption dashboard"]
+  }
+}
