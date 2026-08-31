@@ -1,60 +1,93 @@
-# Career Twin AI - Next-Generation Career Intelligence Platform
+# Career Twin AI — Intelligent Career Simulation Platform
 
-Career Twin AI is a production-grade, AI-driven digital career twin simulator and intelligence platform. It analyzes resumes, GitHub repositories, and user profiles to generate personalized career recommendations, recruiter-grade readiness scorecards, interactive 5-stage career simulations, skill gap matrices, country market intelligence (90+ countries, 3,500+ careers), and a real-time AI career mentor.
+Career Twin AI is an AI-powered career intelligence platform that analyzes resumes, GitHub profiles, and career goals to generate personalized career recommendations, digital twin projections (1, 3, 5, 10 years), learning roadmaps, skill-gap analysis, and country-specific career insights across 3,500+ careers and 93 global markets.
 
 ---
 
-## Architecture Overview
+## ✨ Features & Capabilities
 
-Career Twin AI has been modernized into a high-performance decoupled architecture:
-- **Frontend**: Modern React 19 + TypeScript + Vite + Tailwind CSS + Lucide Icons (Fast, responsive, dark/light mode, mobile-first).
-- **Backend API**: FastAPI REST API (`api/main.py`) exposing modular routers for careers, countries, resume parsing, GitHub intelligence, digital twin simulations, AI mentoring, PDF report generation, and SQLite snapshots.
-- **Service Layer**: Grounded knowledge bases for 3,500+ careers across 15+ domains, 93 countries, ATS keyword extraction, and PyMuPDF vector PDF reporting.
+### 1. Digital Career Twin Simulation
+* 5-stage milestone trajectory projection (Current, 1-Year, 3-Year, 5-Year, and 10-Year horizons).
+* Compensation milestone curves ($/yr or local currency).
+* Core deliverable proof requirements and transition probabilities.
 
-```text
-career-compass-main/
-├── api/                        # FastAPI REST API
-│   ├── routes/                 # Modular API endpoints
-│   │   ├── careers.py          # 3,500+ careers catalog & recommendation
-│   │   ├── countries.py        # 90+ countries market intelligence
-│   │   ├── resume.py           # Multi-format resume parsing & JD matching
-│   │   ├── github.py           # GitHub repo quality analysis
-│   │   ├── analysis.py         # Digital Twin & Readiness engine
-│   │   ├── mentor.py           # AI Mentor chat & question library
-│   │   ├── reports.py          # PDF / JSON report generator
-│   │   ├── profiles.py         # SQLite persistence & recent history
-│   │   └── feedback.py         # Feedback submission
-│   ├── main.py                 # FastAPI application entrypoint & CORS
-│   ├── schemas.py              # Pydantic schemas
-│   ├── report_utils.py         # PyMuPDF styled PDF report generator
-│   └── test_api.py             # Automated API test suite
+### 2. Multi-Format Resume & ATS Parser
+* Deterministic parsing for PDF, DOCX, and TXT resumes.
+* Automatic extraction of skills, experience, projects, certifications, and achievements.
+* ATS readiness score and completeness evaluations with instant autofill.
+
+### 3. GitHub Portfolio Intelligence
+* Repository code quality assessment and language distribution.
+* Star/fork count analysis and open-source contribution level verification.
+* Actionable portfolio recommendations for engineering candidates.
+
+### 4. 93 Global Market Intelligence
+* Localized salary compensation bands (entry, mid, senior).
+* Visa complexity evaluation (Low, Medium, High).
+* Active hiring companies, major industries, and regional interview cultures.
+
+### 5. Deterministic Skill Gap & ROI Matrix
+* Direct comparison of verified competencies vs 3,527 role benchmarks.
+* Priority identification of missing requirements and highest-ROI next skills.
+
+### 6. Interactive AI Career Mentor
+* Multi-turn conversational mentor grounded in the user's specific resume and targets.
+* Quick prompts for interview tips, compensation negotiations, and study planning.
+
+### 7. Executive Reports & Exports
+* Professional vector PDF report download.
+* Complete structured JSON data export.
+* Local profile history persistence.
+
+---
+
+## 🛠️ Architecture & Tech Stack
+
+| Component | Technology |
+|---|---|
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS, Lucide Icons |
+| **Design System** | Claude.com Warm Editorial Design System (Cream `#faf9f5`, Coral `#cc785c`, Serif Display) |
+| **Backend API** | FastAPI, Python 3.10+, Uvicorn, Pydantic |
+| **Document Processing** | PyMuPDF (fitz), python-docx, Pillow, ReportLab |
+| **Data & Storage** | SQLite, Pandas, NumPy |
+| **AI Integration** | Google Gemini API (with deterministic fallback engine) |
+
+---
+
+## 📂 Project Structure
+
+```
+career-compass/
+├── api/                        # FastAPI REST API endpoints
+│   ├── main.py                 # Core FastAPI application & routes
+│   └── test_api.py             # Complete test suite for all endpoints
 │
-├── frontend/                   # Modern React + Vite + Tailwind frontend
+├── frontend/                   # React + Vite Modern Frontend
 │   ├── src/
-│   │   ├── api/client.ts       # Axios client for all API routes
-│   │   ├── context/            # React state management
+│   │   ├── api/                # Axios API client & typed endpoints
 │   │   ├── components/
-│   │   │   ├── ui/             # Core accessible UI components
-│   │   │   ├── layout/         # Header, Footer, Navigation
+│   │   │   ├── ui/             # Reusable UI components (Button, Card, Badge, Modal, Tabs)
+│   │   │   ├── layout/         # Header, Footer, Main Layout
 │   │   │   └── dashboard/      # ScoreCard, DigitalTwinTimeline, SkillGap, etc.
+│   │   ├── context/            # CareerContext state manager
 │   │   ├── pages/              # Home, ProfileSetup, Dashboard, Feedback, NotFound
-│   │   └── App.tsx             # Root Router & Providers
+│   │   └── index.css           # Claude.com design system CSS & typography
 │   ├── package.json
 │   └── vite.config.ts
 │
-├── services/                   # Python Intelligence Engines & Grounded Knowledge
+├── services/                   # Career Intelligence & Knowledge Base
 ├── database/                   # SQLite database storage & queries
 ├── run_api.py                  # API launcher
-└── app.py                      # Legacy Streamlit app
+└── app.py                      # Streamlit application
 ```
 
 ---
 
-## Quick Start Guide
+## 🚀 Quick Start Guide
 
 ### 1. Start the Backend API (FastAPI)
 
-Make sure dependencies are installed, then start the FastAPI server on port 8000:
+Make sure dependencies are installed, then start the FastAPI server:
 ```bash
 python run_api.py
 ```
@@ -85,40 +118,6 @@ npm run build
 
 ---
 
-## Core Features & Engines
-
-1. **Digital Career Twin Simulation**:
-   - 5-stage timeline: Current Profile -> 1 Year -> 3 Year -> 5 Year -> 10 Year future.
-   - Stage-by-stage compensation milestones, confidence scoring, and required proof competencies.
-
-2. **Recruiter-Grade Readiness Scoring**:
-   - 6 Coach Scorecards: Readiness, Success Probability, AI Confidence, Skill Coverage, Portfolio Strength, and Market Readiness.
-   - Categorized strength signals and prioritized improvement suggestions.
-
-3. **Country Market Intelligence**:
-   - 93 countries supported with local salary compensation bands (Entry, Mid, Senior).
-   - Visa difficulty ratings, hiring trend velocity, remote work flexibility, and top employer ecosystems.
-
-4. **Multi-Format Resume & ATS Parser**:
-   - PDF, DOCX, TXT, and image OCR resume parsing.
-   - Domain recognition, ATS keyword coverage, and automated profile autofill.
-
-5. **Live Job Description Matcher**:
-   - Compare your uploaded resume against any pasted job posting to get instant Keyword Match %, Semantic Match %, Technical Match %, and hiring recommendations.
-
-6. **GitHub Portfolio Intelligence**:
-   - Scans public repositories, code quality score, star/fork count, language distribution, and open-source impact.
-
-7. **AI Career Mentor**:
-   - Profession-aware multi-turn AI chat powered by your profile context, salary targets, and roadmap.
-
-8. **Export & Reporting**:
-   - Vector PDF reports generated with PyMuPDF with executive summaries and score bars.
-   - JSON export and local SQLite database snapshot storage.
-
----
-
-## Developer Contact
-- **Author**: Yash Agnihotri
-- **GitHub**: [github.com/REACHER-VIRUS](https://github.com/REACHER-VIRUS)
-- **Email**: `yashpree237915@gmail.com`
+## 👨‍💻 Author & Attribution
+* **Developer**: Yash Agnihotri
+* **Frontend Redesign & Architecture**: Career Twin AI Team
