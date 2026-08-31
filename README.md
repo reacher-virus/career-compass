@@ -1,195 +1,123 @@
-# Career Twin AI
+# Career Twin AI — Intelligent Career Simulation Platform
 
-Career Twin AI is an AI-powered career intelligence platform that analyzes resumes, GitHub profiles, and career goals to generate personalized career recommendations, learning roadmaps, skill-gap analysis, and country-specific career insights.
-
-The platform combines resume parsing, portfolio analysis, and large language models to provide users with actionable career guidance based on their current profile.
+Career Twin AI is an AI-powered career intelligence platform that analyzes resumes, GitHub profiles, and career goals to generate personalized career recommendations, digital twin projections (1, 3, 5, 10 years), learning roadmaps, skill-gap analysis, and country-specific career insights across 3,500+ careers and 93 global markets.
 
 ---
 
-## Features
+## ✨ Features & Capabilities
 
-### Resume Analysis
+### 1. Digital Career Twin Simulation
+* 5-stage milestone trajectory projection (Current, 1-Year, 3-Year, 5-Year, and 10-Year horizons).
+* Compensation milestone curves ($/yr or local currency).
+* Core deliverable proof requirements and transition probabilities.
 
-* Resume parsing from PDF, DOCX, and image formats
-* Automatic extraction of education, experience, projects, certifications, skills, and achievements
-* OCR support for image-based resumes
-* Current designation identification
-* Structured resume profile generation
+### 2. Multi-Format Resume & ATS Parser
+* Deterministic parsing for PDF, DOCX, and TXT resumes.
+* Automatic extraction of skills, experience, projects, certifications, and achievements.
+* ATS readiness score and completeness evaluations with instant autofill.
 
-### GitHub Profile Analysis
+### 3. GitHub Portfolio Intelligence
+* Repository code quality assessment and language distribution.
+* Star/fork count analysis and open-source contribution level verification.
+* Actionable portfolio recommendations for engineering candidates.
 
-* Public repository analysis
-* Programming language distribution
-* Technical skill extraction
-* Portfolio strength evaluation
-* Repository quality assessment
-* Activity and contribution insights
+### 4. 93 Global Market Intelligence
+* Localized salary compensation bands (entry, mid, senior).
+* Visa complexity evaluation (Low, Medium, High).
+* Active hiring companies, major industries, and regional interview cultures.
 
-### Career Recommendation Engine
+### 5. Deterministic Skill Gap & ROI Matrix
+* Direct comparison of verified competencies vs 3,527 role benchmarks.
+* Priority identification of missing requirements and highest-ROI next skills.
 
-* Resume-aware career recommendations
-* Career progression based on current designation
-* Skill-gap analysis
-* Top 5 personalized career suggestions
-* Explainable recommendation reasoning
+### 6. Interactive AI Career Mentor
+* Multi-turn conversational mentor grounded in the user's specific resume and targets.
+* Quick prompts for interview tips, compensation negotiations, and study planning.
 
-### Career Intelligence
-
-* Country-specific career insights
-* Salary estimates
-* Job market demand
-* Required technical skills
-* Visa difficulty
-* Industry growth information
-
-Supported regions include:
-
-* India
-* Germany
-* United States
-* Canada
-* Australia
-
-### AI Mentor
-
-The integrated AI mentor assists users with
-
-* Career planning
-* Skill development
-* Learning recommendations
-* Interview preparation
-* Career roadmap generation
-
-### Resume Match Score
-
-The platform evaluates:
-
-* Technical Skills
-* Soft Skills
-* Experience
-* Projects
-* Education
-* Certifications
-* ATS Compatibility
-* Industry Readiness
-
-### Reports
-
-* Professional PDF reports
-* JSON export
+### 7. Executive Reports & Exports
+* Professional vector PDF report download.
+* Complete structured JSON data export.
+* Local profile history persistence.
 
 ---
 
-## Technology Stack
+## 🛠️ Architecture & Tech Stack
 
-| Component         | Technology                               |
-| ----------------- | ---------------------------------------- |
-| Frontend          | Streamlit                                |
-| Backend           | Python                                   |
-| AI                | Google Gemini API                        |
-| Database          | SQLite                                   |
-| Resume Processing | PyPDF2, python-docx, pytesseract, Pillow |
-| Data Analysis     | Pandas, NumPy                            |
-| Visualization     | Plotly                                   |
-| APIs              | GitHub REST API, Gemini API              |
+| Component | Technology |
+|---|---|
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS, Lucide Icons |
+| **Design System** | Claude.com Warm Editorial Design System (Cream `#faf9f5`, Coral `#cc785c`, Serif Display) |
+| **Backend API** | FastAPI, Python 3.10+, Uvicorn, Pydantic |
+| **Document Processing** | PyMuPDF (fitz), python-docx, Pillow, ReportLab |
+| **Data & Storage** | SQLite, Pandas, NumPy |
+| **AI Integration** | Google Gemini API (with deterministic fallback engine) |
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```text
-Career-Twin-AI/
+```
+career-compass/
+├── api/                        # FastAPI REST API endpoints
+│   ├── main.py                 # Core FastAPI application & routes
+│   └── test_api.py             # Complete test suite for all endpoints
 │
-├── assets/
-├── data/
-├── database/
-├── models/
-├── prompts/
-├── services/
-├── app.py
-├── requirements.txt
-└── README.md
+├── frontend/                   # React + Vite Modern Frontend
+│   ├── src/
+│   │   ├── api/                # Axios API client & typed endpoints
+│   │   ├── components/
+│   │   │   ├── ui/             # Reusable UI components (Button, Card, Badge, Modal, Tabs)
+│   │   │   ├── layout/         # Header, Footer, Main Layout
+│   │   │   └── dashboard/      # ScoreCard, DigitalTwinTimeline, SkillGap, etc.
+│   │   ├── context/            # CareerContext state manager
+│   │   ├── pages/              # Home, ProfileSetup, Dashboard, Feedback, NotFound
+│   │   └── index.css           # Claude.com design system CSS & typography
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── services/                   # Career Intelligence & Knowledge Base
+├── database/                   # SQLite database storage & queries
+├── run_api.py                  # API launcher
+└── app.py                      # Streamlit application
 ```
 
 ---
 
-## Installation
+## 🚀 Quick Start Guide
 
-Clone the repository
+### 1. Start the Backend API (FastAPI)
 
+Make sure dependencies are installed, then start the FastAPI server:
 ```bash
-git clone https://github.com/reacher-virus/Career-Twin-AI.git
+python run_api.py
+```
+*API interactive documentation will be live at `http://127.0.0.1:8000/docs`.*
+
+### 2. Start the Frontend (React + Vite)
+
+In another terminal, navigate into the `frontend` folder and start the dev server:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+*The web application will open at `http://localhost:3000` with automatic `/api` proxying.*
+
+### 3. Run Automated Tests
+
+To test the backend API layer and PDF report builder:
+```bash
+python api/test_api.py
 ```
 
-Move into the project directory
-
+To build and verify the frontend production bundle:
 ```bash
-cd Career-Twin-AI
-```
-
-Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-Activate the environment
-
-Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application
-
-```bash
-streamlit run app.py
+cd frontend
+npm run build
 ```
 
 ---
 
-## Project Workflow
-
-1. Upload a resume or complete the manual profile.
-2. Optionally connect a GitHub username.
-3. Extract professional information from the resume.
-4. Analyze GitHub repositories and technical skills.
-5. Generate personalized career recommendations.
-6. Produce a career roadmap and skill-gap analysis.
-7. Export the generated report.
-
----
-
-## Future Enhancements
-
-* LinkedIn profile integration
-* Interview preparation module
-* Job recommendation engine
-* ATS resume optimization
-* Mock interview system
-* Company-specific hiring insights
-* Multi-language resume support
-
----
-
-## Screenshots
-
-The following sections can be included after deployment:
-
-* Landing Page
-* Resume Analysis
-* GitHub Dashboard
-* Career Recommendations
-* AI Mentor
-* Career Roadmap
-* Country Intelligence
-* PDF Report
-
----
+## 👨‍💻 Author & Attribution
+* **Developer**: Yash Agnihotri
+* **Frontend Redesign & Architecture**: Career Twin AI Team
